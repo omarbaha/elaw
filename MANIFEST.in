@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include elaw *.css
+recursive-include elaw *.csv
+recursive-include elaw *.html
+recursive-include elaw *.ico
+recursive-include elaw *.js
+recursive-include elaw *.json
+recursive-include elaw *.md
+recursive-include elaw *.png
+recursive-include elaw *.py
+recursive-include elaw *.svg
+recursive-include elaw *.txt
+recursive-exclude elaw *.pyc
