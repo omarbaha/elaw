@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Hossam H-Coder7" />
+    <link rel="icon" href="/assets/elaw/images/logo2.png" title="Favicon" sizes="16x16" />
+    <!--With LTR -->
+    <link rel="stylesheet" href="/assets/elaw/css/lib/bootstrap-ltr.min.css">
+    <!--/With LTR -->
+    <!--With RTL -->
+    <!-- <link rel="stylesheet" href="css/lib/bootstrap-rtl.min.css" /> -->
+    <!--/With RTL -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/elaw/css/lib/animate.css" />
+    <link rel="stylesheet" href="/assets/elaw/css/lib/all.min.css" />
+    <link rel="stylesheet" href="/assets/elaw/css/lib/owl.carousel.min.css" />
+    <link rel="stylesheet" href="/assets/elaw/css/lib/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="/assets/elaw/css/lib/jquery.fancybox.css" />
+    <link rel="stylesheet" href="/assets/elaw/css/lib/swiper.min.css" />
+    <link rel="stylesheet" href="/assets/elaw/css/styles.css" />
+    <link rel="stylesheet" href="/assets/elaw/css/style_ar.css">
+    <title> Lawer Tech </title>
+</head>
+
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="{{content.image_logo}}" class="logo" style="width: 180px;height: 62px;" alt=""/>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="#">  الرئيسية </a>
+                    <a class="nav-item nav-link" href="#about_sec">نبذه عنا</a>
+                    <a class="nav-item nav-link" href="#services_sec">خدماتنا</a>
+                    <a class="nav-item nav-link" href="#features">مميزاتنا</a>
+                    <a class="nav-item nav-link" href="#pkg_sec">اسعار النظام</a>
+                    <a class="nav-item nav-link" href="/contact">تواصل معنا</a>
+                    <a class="nav-item nav-link" href="/register">التسجيل</a>
+                </div>
+              <!--  <div class="r_side mx-2">
+                    <a class="butn bg_color" href="#">EN</a>
+                </div>-->
+                <div class="r_side mx-2">
+                    <a class="butn bg_color" href="/login">دخول</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- end navbar -->
+
+
+    <!--Contents-->
+    <main>
+        <!--Header-->
+        <header class="header section_padding">
+            <div class="container">
+                <div class="swiper-container header_swiper pb-5">
+                    <div class="swiper-wrapper">
+                        {% for swiper in content.slider_data %}
+                        <div class="swiper-slide">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6">
+                                    <div class="info">
+                                        <h1 class="wow fadeInUp">   
+                                            {{swiper.title}}
+                                        </h1>
+                                        <p class="wow fadeInUp" data-wow-delay="0.1s">
+                                            {{swiper.text}}
+                                        </p>
+                                        <!-- <a class="butn bg_color wow fadeInUp" data-wow-delay="0.2s" href="#">Create a free account </a>
+                                        <p class="wow fadeInUp" data-wow-delay="0.3s">No Credit Card Necessary</p> -->
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="img">
+                                        <img class="wow zoomIn" src="{{swiper.image}}" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                        
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            
+            </div>
+        </header>
+        <!--End-Header-->
+
+        <!-- about_sec -->
+        <div id="about_sec" class="about_sec section_padding">
+            <h1 class="main_color  wow fadeInUp font-weight-bold  text-center mb-5" style="visibility: visible; animation-name: fadeInUp;">   
+                نبذة عنا
+            </h1>
+            <div class="container">
+                {% for about in content.about_data %}
+               {% if loop.index % 2 == 0 %}  
+                <div class="row align-items-center">   
+                    <div class="col-lg-6">
+                        <div class="info">
+                            
+                            <h1 class="wow fadeInUp">   
+                                {{about.title}}
+                            </h1>
+                            <p class="wow fadeInUp" data-wow-delay="0.1s">
+                                {{about.text}}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="img">
+                            <img src="{{about.image}}" class="sec-img wow zoomIn" alt=""/>
+                        </div>
+                    </div>
+                </div>
+{% else %}
+<div class="row align-items-center mt-5 mb-5">   
+    <div class="col-lg-6">
+        <div class="img" style="text-align: right;">
+            <img src="{{about.image}}" class="sec-img wow zoomIn" alt=""/>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="info">
+            
+            <h1 class="wow fadeInUp">   
+                {{about.title}}
+            </h1>
+            <p class="wow fadeInUp" data-wow-delay="0.1s">
+                {{about.text}}
+            </p>
+        </div>
+    </div>
+
+</div>  
+            {% endif %}
+           
+                {% endfor %}
+             
+                <!--<a class="butn bg_color m-auto mt-5 wow fadeInUp" data-wow-delay="0.2s" href="about.html"><b>مشاهدة المزيد</b></a>-->
+
+            </div>
+        </div>
+
+        <!-- services_sec -->
+        <div id="services_sec" class="services_sec section_padding">
+            <div class="container">
+                <h1 class="sec_title wow fadeInUp font-weight-bold  text-center mb-5">   
+                    خدماتنا
+                </h1>
+                <div class="row">
+                    {% for service in content.service_data %}
+                    <div class="col-lg-4 col-md-6">
+                        <div class="serv_card wow zoomIn">
+                            <div class="flip-card-inner">
+                                <div class="front">
+                                    <img src="{{service.image}}" class="icon" alt=""/>
+                                    <h2 class="label text-white text-center">
+                                        {{service.title}}
+                                    </h2>
+                                </div>
+                                <div class="back">
+                                    <p class="p">
+                                        {{service.text}}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <!-- features -->
+        <div id="features" class="features section_padding">
+            <div class="container">
+                <h1 class="sec_title wow fadeInUp font-weight-bold  text-center mb-5">   
+                    مميزاتنا
+                </h1>
+                <div class="row">
+                    {% for advantages in content.advantages_data %}
+                    <div class="col-lg-4">
+                        <div class="items">
+                            <div class="icon wow fadeInDown">
+                                <img src="{{advantages.image}}" alt="">
+                            </div>
+                            <div class="info wow fadeInUp">
+                                <h6>{{advantages.title}}</h6>
+                                <p>
+                                    {{advantages.text}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                   
+                </div>
+          
+            </div>
+        </div>
+        <!-- end features -->
+
+        <!-- get access -->
+        <!-- <div class="get_access">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="img wow fadeInUp">
+                            <img src="images/access.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-5 offset-lg-1">
+                        <div class="info_box wow zoomIn">
+                            <h3>Get access to your daily cost.</h3>
+                            <p>With lots of unique blocks, you can easily build a page without coding. Build your next website within few minutes.</p>
+                            <a href="#" class="butn bg_color">Get started now</a>
+                            <img src="images/cube.png" alt="" class="cube">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="images/access_curve.svg" alt="" class="curve">
+        </div> -->
+        <!-- end get access -->
+
+        <!-- value  -->
+        <!-- <div class="value section_padding">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="content">
+                            <div class="row">
+                                <div class="col-lg-5">
+                                    <div class="info wow fadeInUp">
+                                        <h2>We create value to your business</h2>
+                                        <p>With lots of unique blocks, you can easily build a page without coding. Build your next website within few minutes.</p>
+                                        <ul>
+                                            <li>
+                                                <span class="num">1</span>
+                                                <div class="inf">
+                                                    <h6>User centered design</h6>
+                                                    <p>With lots of unique blocks, you can easily build a page without coding. </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="num">2</span>
+                                                <div class="inf">
+                                                    <h6>Get latest updates</h6>
+                                                    <p>With lots of unique blocks, you can easily build a page without coding. </p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-7">
+                                    <div class="img wow zoomIn">
+                                        <img src="images/val.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- end value  -->
+
+        <!-- clients -->
+        <section id="pkg_sec" class="clients pkg_sec">
+            <div class="container">
+                <h1 class="sec_title wow fadeInUp font-weight-bold  text-center mb-5">   
+                    اسعار النظام 
+                </h1>
+                <div class="content">
+                    <div class="row">
+                     {% for plan in plans %}
+                        <div class="col-lg-4">
+                            <div class="pkg_card wow fadeInUp">
+                                <div class="text-center">
+                                    <h6 class="sub_title">{{plan.title}}</h6>
+                                    <h6 class="sub_title"> {{plan.system_type}}</h6>
+                                    <div class="main_title d-flex">
+                                        <h1>{{plan.price}}</h1> <h5>ريال</h5> <h6>/مستوى</h6>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="custom_ul">
+
+                                        {% for advantage in plan.advantages %}
+                                        <li class="li">
+                                            {{advantage.title}}
+                                        </li>
+                                        {% endfor %}
+                                      
+                                    </ul>
+                                </div>
+                                <div class="foot_card">
+                                    <small class="small_span d-block main_color font-weight-bold text-center">النسبة الاولى : {{plan.rate_first}}</small>
+                                    <a class="butn bg_color m-auto  mt-5" href="{{plan.url_button}}"><b> اطلب الباقة  </b></a>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                     
+                    </div>
+                </div>
+            </div>
+            <img src="/assets/elaw/images/icons/heart.png" alt="" class="heart">
+            <img src="/assets/elaw/images/icons/star.png" alt="" class="star">
+            <img src="/assets/elaw/images/access_curve.svg" alt="" class="curve">
+        </section>
+        <!-- end clients -->
+
+        <!-- partners_sec -->
+        <section class="partners_sec section_padding">
+            <div class="container">
+                <div class="swiper-container partners_swiper">
+                    <div class="swiper-wrapper">
+                        {% for partner in content.partners %}
+                        <div class="swiper-slide">
+                            <div class="img_box">
+                                <img src="{{partner.image}}" class="partner_logo" alt=""/>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end partners_sec -->
+
+        <!-- get demo -->
+        <!-- <section class="get_demo section_padding">
+            <div class="container">
+                <div class="section_head text-center wow fadeInDown">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-5">
+                            <h2>Get a demo</h2>
+                            <p>With lots of unique blocks, you can easily build a page without coding. Build your next website fast.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-4">
+                        <form class="form wow fadeInUp">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Type your name">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Enter your email">
+                            </div>
+                            <div class="form-group">
+                                <select name="" id="" class="form-control custom-select">
+                                    <option value="">Select an option</option>
+                                    <option value="">Select an option</option>
+                                    <option value="">Select an option</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select name="" id="" class="form-control custom-select">
+                                    <option value="">Select an option</option>
+                                    <option value="">Select an option</option>
+                                    <option value="">Select an option</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <button class="butn bg_color w-100">Get a free demo</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <img src="images/access_curve.svg" alt="" class="curve">
+            <img src="images/demo_ls.png" alt="" class="demo_ls wow fadeInLeft">
+            <img src="images/demo_rs.png" alt="" class="demo_rs wow fadeInRight">
+        </section> -->
+        <!-- end get demo -->
+
+    </main>
+    <!--End-Contents-->
+    <!--Footer-->
+    <footer class="section_padding" style="padding-bottom: 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="links">
+                        <div class="row justify-content-between">
+                            <div class="col-lg-5">
+                                <h5 class="text-black mb-4">تواصل معنا</h5>
+                                <p style="margin-top: 0;margin-bottom: 1rem;"><i class="fa fa-map-marker-alt me-3" style="margin-left: 1rem !important;"></i><span id="footer-address">{{content.address}}</span></p>
+                                <p style="margin-top: 0;margin-bottom: 1rem;"><i class="fa fa-phone me-3" style="margin-left: 1rem !important;"></i><span id="footer-phone">{{content.phone}}</span></p>
+                                <p style="margin-top: 0;margin-bottom: 1rem;"><i class="fa fa-envelope me-3" style="margin-left: 1rem !important;"></i><span id="footer-envelope">{{content.email}}</span></p>
+                                <div class="items">
+                                    <!--<img src="images/logo.svg" class="logo" alt=""/>-->
+                                    <div class="social_icons justify-content-right d-flex mt-3">
+                                        <a href="{{content.facebook}}" class="icon"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="{{content.twitter}}" class="icon"><i class="fab fa-twitter"></i></a>
+                                        <a href="{{content.instagram}}" class="icon"><i class="fab fa-instagram"></i></a>
+                                        <a href="{{content.email}}" class="icon"><i class="far fa-envelope"></i></a>        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="items">
+                                    <h6>روابط هامه</h6>
+                                    <ul>
+                                        <li>
+                                            <a href="#about_sec">من  نحن</a>
+                                        </li>
+                                        <li>
+                                            <a href="#services_sec">الخدمات</a>
+                                        </li>
+                                      <!--  <li>
+                                            <a href="#">اتصل بنا</a>
+                                        </li>-->
+                                        <li>
+                                            <a href="#features">مميزاتنا</a>
+                                        </li>
+                                        <li>
+                                            <a href="#pkg_sec">اسعار النظام</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--<div class="col-lg-3">
+                                <div class="items">
+                                    <h6>خدماتنا</h6>
+                                    <ul>
+                                      <li>
+                                            <a href="#">اتصل بنا</a>
+                                        </li>
+                                        <li>
+                                            <a href="#about_sec">من  نحن</a>
+                                        </li>
+                                        <li>
+                                            <a href="#pkg_sec">اسعار النظام</a>
+                                        </li>
+                                        <li>
+                                            <a href="#features">مميزاتنا</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+              <div class="col-lg-4">
+                    <div class="foot_subscribe">
+                        <h6>النشرة البريديه</h6>
+                        <div class="box">
+                            <p>اشترك معنا وتابع اخر اخبارنا</p>
+                            <form action="" class="form">
+                                <div class="form-group">
+                                    <input type="text" placeholder="البريد الالكتروني">
+                                    <button class="butn bg_color">اشتراك</button>
+                                </div>
+                            </form>
+                            <small>لن نرسل لك بريدًا عشوائيًا على الإطلاق!</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container px-lg-5" style="padding-top: 50px;">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-12 text-center text-md-start mb-3 mb-md-0">
+                         All Right Reserved . <a class="border-bottom" href="index.html"> WOW IT </a> <span id="CopyYear"></span>©  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--End-Footer-->
+    <!-- -------------- request ----------------- -->
+    <script src="/assets/elaw/js/lib/jquery-3.0.0.min.js "></script>
+    <script src="/assets/elaw/js/lib/jquery-migrate-3.0.0.min.js "></script>
+    <script src="/assets/elaw/js/lib/popper.min.js "></script>
+    <script src="/assets/elaw/js/lib/bootstrap.min.js "></script>
+    <script src="/assets/elaw/js/lib/wow.min.js "></script>
+    <script src="/assets/elaw/js/lib/jquery.fancybox.js "></script>
+    <script src="/assets/elaw/js/lib/owl.carousel.min.js "></script>
+    <script src="/assets/elaw/js/lib/swiper.min.js "></script>
+    <script src="/assets/elaw/js/lib/snake.js "></script>
+    <script src="/assets/elaw/js/main.js "></script>
+    <script>
+        document.getElementById('CopyYear').innerHTML=new Date().getFullYear();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,179 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-05-11 12:26:14.521487",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "header_section",
+  "image_logo",
+  "slider_section",
+  "slider_data",
+  "about_section",
+  "about_data",
+  "service_section",
+  "service_title",
+  "service_data",
+  "service_image",
+  "advantages_section",
+  "advantages_data",
+  "our_partners_section",
+  "partners",
+  "contact_section",
+  "address",
+  "phone",
+  "email",
+  "work_days",
+  "work_time",
+  "twitter",
+  "facebook",
+  "instagram"
+ ],
+ "fields": [
+  {
+   "fieldname": "header_section",
+   "fieldtype": "Section Break",
+   "label": "Header"
+  },
+  {
+   "fieldname": "image_logo",
+   "fieldtype": "Attach Image",
+   "label": "Image Logo"
+  },
+  {
+   "fieldname": "slider_section",
+   "fieldtype": "Section Break",
+   "label": "Slider"
+  },
+  {
+   "fieldname": "slider_data",
+   "fieldtype": "Table",
+   "label": "Slider Data",
+   "options": "Website Template Table"
+  },
+  {
+   "fieldname": "about_section",
+   "fieldtype": "Section Break",
+   "label": "About"
+  },
+  {
+   "fieldname": "about_data",
+   "fieldtype": "Table",
+   "label": "About Data",
+   "options": "Website Template Table"
+  },
+  {
+   "fieldname": "service_section",
+   "fieldtype": "Section Break",
+   "label": "Service"
+  },
+  {
+   "fieldname": "service_title",
+   "fieldtype": "Data",
+   "label": "Service Title"
+  },
+  {
+   "fieldname": "service_data",
+   "fieldtype": "Table",
+   "label": "Service Data",
+   "options": "Website Template Table"
+  },
+  {
+   "fieldname": "service_image",
+   "fieldtype": "Attach Image",
+   "label": "Service Image"
+  },
+  {
+   "fieldname": "advantages_section",
+   "fieldtype": "Section Break",
+   "label": "Advantages"
+  },
+  {
+   "fieldname": "advantages_data",
+   "fieldtype": "Table",
+   "label": "Advantages data",
+   "options": "Website Template Table"
+  },
+  {
+   "fieldname": "our_partners_section",
+   "fieldtype": "Section Break",
+   "label": "Our partners"
+  },
+  {
+   "fieldname": "partners",
+   "fieldtype": "Table",
+   "label": "Partners",
+   "options": "Website Template Table"
+  },
+  {
+   "fieldname": "contact_section",
+   "fieldtype": "Section Break",
+   "label": "Contact"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fieldname": "phone",
+   "fieldtype": "Data",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "work_days",
+   "fieldtype": "Data",
+   "label": "Work Days"
+  },
+  {
+   "fieldname": "work_time",
+   "fieldtype": "Data",
+   "label": "Work Time"
+  },
+  {
+   "fieldname": "twitter",
+   "fieldtype": "Data",
+   "label": "Twitter"
+  },
+  {
+   "fieldname": "facebook",
+   "fieldtype": "Data",
+   "label": "Facebook"
+  },
+  {
+   "fieldname": "instagram",
+   "fieldtype": "Data",
+   "label": "Instagram"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2023-07-13 14:48:45.868869",
+ "modified_by": "Administrator",
+ "module": "Elaw",
+ "name": "Website Templete Setting",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

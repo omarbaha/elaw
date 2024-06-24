@@ -1,0 +1,134 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url('/assets/elaw/fonts/Cairo.ttf');
+  }
+body,
+html {
+    direction: rtl;
+}
+
+body,
+html,
+body p,
+.navbar .custom-navbar .nav-links {
+    font-family: myFirstFont;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: myFirstFont;
+    font-weight: 700;
+}
+
+.info {
+    text-align: start;
+}
+
+/* header .img img {
+    transform: rotateY(180deg);
+} */
+
+.about .img {
+    padding-left: 40px;
+    padding-right: 0;
+}
+
+.about .img::before {
+    left: unset;
+    right: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.section-head h2 {
+    text-align: right;
+    padding-left: 0;
+    padding-right: 15px;
+}
+
+.section-head h2 span {
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+footer .items.subscribe .butn {
+    right: unset;
+    left: 5px;
+}
+
+footer .foot .items a:nth-of-type(2) {
+    border-left: 0;
+    border-right: 1px solid #fff;
+}
+
+footer::before {
+    right: unset;
+    left: 100px;
+}
+
+.navbar .custom-navbar .nav-list .mob-logo {
+    text-align: right;
+}
+
+.butn span i {
+    right: 5px;
+    left: 0;
+    transform: rotate(180deg);
+}
+
+.video .content:after {
+    right: unset;
+    left: 0;
+}
+
+.video .img .play-img {
+    right: unset;
+    left: -60px;
+}
+
+.video .info {
+    left: unset;
+    right: 6vw;
+}
+
+.contact .side-head::before {
+    left: unset;
+    right: 0;
+}
+
+@media screen and (max-width: 991px) {
+    /* -------- navbar ltr ---------- */
+    .navbar .custom-navbar .nav-list {
+        left: unset;
+        right: -100%;
+        text-align: left;
+    }
+    .navbar .custom-navbar .nav-list.show {
+        left: unset;
+        right: 0;
+    }
+    .navbar .custom-navbar .nav-toggle {
+        float: left;
+    }
+    .navbar .custom-navbar .navbar-brand {
+        float: right;
+    }
+    .navbar .custom-navbar .drop-nav .drop-down {
+        left: unset;
+        right: 0;
+        text-align: right;
+    }
+    .navbar .custom-navbar .nav-list .nav-items {
+        text-align: right;
+    }
+    .navbar .custom-navbar .nav-links i {
+        margin-right: 0;
+        margin-left: 10px;
+    }
+}
